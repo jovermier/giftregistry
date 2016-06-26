@@ -8,11 +8,12 @@ import {RouteComponent, PlatformDirective} from '../../frameworks/core.framework
 import {LangSwitcherComponent} from '../../frameworks/i18n.framework/index';
 import {NavbarComponent} from './navbar.component';
 import {ToolbarComponent} from './toolbar.component';
+import {UserService} from "../../shared/services/gift.service";
 
 @RouteComponent({
   moduleId: module.id,
   selector: 'sd-app',
-  viewProviders: [NameListService],
+  viewProviders: [NameListService, UserService],
   templateUrl: 'app.component.html',
   directives: [LangSwitcherComponent, NavbarComponent, ToolbarComponent, PlatformDirective],
   changeDetection: ChangeDetectionStrategy.Default // Everything else uses OnPush

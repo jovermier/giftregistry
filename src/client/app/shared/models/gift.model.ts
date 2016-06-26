@@ -1,3 +1,17 @@
-/**
- * Created by Jason on 6/26/2016.
- */
+export class Gift {
+  id: number;
+  name: string;
+  description: string;
+}
+
+export class Giftlist {
+  id: number;
+  name: string;
+  gifts: Gift[];
+}
+
+export class User {
+  id: number;
+  name: string;
+  giftlists: Giftlist[];
+}
